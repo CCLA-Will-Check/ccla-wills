@@ -1,0 +1,2 @@
+class Testator < ApplicationRecord
+end
