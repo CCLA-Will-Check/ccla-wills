@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  get '/', to: 'find#new'
   get 'search/new'
 
-  get 'find/show'
+  get 'find/new'
 
   get 'register/new'
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
