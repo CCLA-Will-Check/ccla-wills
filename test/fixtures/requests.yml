@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  applicant: MyString
+  email: MyString
+  telephone: MyString
+  testator_first: MyString
+  testator_last: MyString
+  testator_alt: MyString
+  testator_dob: 2017-03-25
+  testator_city: MyString
+  testator_province: MyString
+  testator_country: MyString
+  testator_last_resident: MyString
+
+two:
+  applicant: MyString
+  email: MyString
+  telephone: MyString
+  testator_first: MyString
+  testator_last: MyString
+  testator_alt: MyString
+  testator_dob: 2017-03-25
+  testator_city: MyString
+  testator_province: MyString
+  testator_country: MyString
+  testator_last_resident: MyString
