@@ -1,5 +1,9 @@
 class RegisterController < ApplicationController
 
+  def index
+    @testators = Testator.all
+  end
+
   def new
     @testator = Testator.new
   end

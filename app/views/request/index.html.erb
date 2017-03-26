@@ -1,0 +1,15 @@
+<table class="table">
+<tr><th>Applicant</th><th>Email</th><th>Telephone</th><th>Testator</th><th>Testator Alt. Name</th><th>DOB</th><th>City</th><th>Province</th><th>Last Resided In</th</tr>
+<% for request in @requests do %>
+  <tr>
+  <td><%= request.applicant %></td>
+    <td><%= request.email %></td>
+    <td><%= request.telephone %></td>
+    <td><%= request.testator_first %> <%= request.testator_last %></td>
+    <td><%= request.testator_alt %></td>
+    <td><%= request.testator_dob %></td>
+    <td><%= request.testator_city %></td>
+    <td><%= request.testator_province %></td>
+    <td><%= request.testator_last_resident %></td></tr>
+<% end %>
+</table>

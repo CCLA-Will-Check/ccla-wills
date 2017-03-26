@@ -1,0 +1,14 @@
+<table class="table">
+<tr><th>Name</th><th>Address</th><th>City</th><th>Province</th><th>Country</th><th>Postal Code</th><th>Telephone</th><th>LSUC Number</th></tr>
+<% for firm in @firms do %>
+  <tr>
+  <td><%= firm.name %></td>
+    <td><%= firm.address %></td>
+    <td><%= firm.city %></td>
+    <td><%= firm.province %></td>
+    <td><%= firm.country %></td>
+    <td><%= firm.postal_code %></td>
+    <td><%= firm.telephone %></td>
+    <td><%= firm.lsuc %></td></tr>
+<% end %>
+</table>
