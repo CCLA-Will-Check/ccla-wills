@@ -3,18 +3,18 @@
 
     <em>* denotes a required field</em>
     <%= form_for :request do |f| %>
-      *Your name: <%= f.text_field :applicant %><br />
-      Your email: <%= f.text_field :email %><br />
-      Telephone: <%= f.text_field :telephone %><br />
-      <br />
-      Testator Information: <br />
-      *First name: <%= f.text_field :testator_first %><br />
-      *Last name: <%= f.text_field :testator_last %><br />
-      Alternate last name: <%= f.text_field :testator_alt %><br />
-      *Date of Birth: <%= f.date_field :testator_dob %><br />
-      *City of Birth: <%= f.text_field :testator_city %><br />
-      Province of Birth: <%= f.text_field :testator_province %><br />
-      Last resident in (city) <%= f.text_field :testator_last_resident %><br />
-      <%= f.submit %>
+      <table class="table">
+        <tr><td>*Your name:</td><td><%= f.text_field :applicant %></td></tr>
+        <tr><td>Your email:</td><td><%= f.text_field :email %></td></tr>
+        <tr><td>Telephone:</td><td><%= f.text_field :telephone %></tr>
+        <tr><td>*Testator's first name:</td><td><%= f.text_field :testator_first %></td></tr>
+        <tr><td>*Testator's last name:</td><td><%= f.text_field :testator_last %></td></tr>
+        <tr><td>Testator's alternate name:</td><td><%= f.text_field :testator_alt %></td></tr>
+        <tr><td>*Date of birth:</td><td><%= f.date_field :testator_dob %></td></tr>
+        <tr><td>*City of birth:</td><td><%= f.text_field :testator_city %></td></tr>
+        <tr><td>Province of birth:</td><td><%= f.text_field :testator_province %></td></tr>
+        <tr><td>Last resident in (city)</td><td><%= f.text_field :testator_last_resident %></td></tr>
+      </table>
+      <%= f.submit "Submit Request" %>
     <% end %>
     <br /><br />
