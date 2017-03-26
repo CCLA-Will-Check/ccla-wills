@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170325184312) do
+ActiveRecord::Schema.define(version: 20170326134345) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,9 @@ ActiveRecord::Schema.define(version: 20170325184312) do
     t.string   "last_resided"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.integer  "firm_id"
+    t.index ["firm_id"], name: "index_testators_on_firm_id", using: :btree
   end
 
+  add_foreign_key "testators", "firms"
 end
