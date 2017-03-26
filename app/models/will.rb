@@ -1,8 +1,4 @@
 class Will < ApplicationRecord
-  # validates :first_name, presence: true
-  # validates :last_name, presence: true
-  # validates :dob, presence: true
-  # validates :city_of_birth, presence: true
-  # validates :country_of_birth, presence: true
+  validates_presence_of :first_name, :last_name, :dob, :city_of_birth, :country_of_birth
   belongs_to :firm
 end
