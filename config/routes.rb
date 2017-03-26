@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
-  get '/', to: 'request#new'
 
-  get 'register', to: 'register#new'
-  get 'firm', to: 'firm#new'
-
-  resources :request, :register, :search, :firm
+  resources :request, :will, :search, :firm
 
 
 

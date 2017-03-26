@@ -13,4 +13,4 @@
   <tr><td><%= @firm.telephone %></td></tr>
   <tr><td><%= @firm.lsuc %></td></tr>
 </table
-<p>Please click <%= link_to 'here', 'register#new'%> to register a new will.</p>
+<p>Please click <%= link_to 'here', controller: :will, action: :new %> to register a new will.</p>

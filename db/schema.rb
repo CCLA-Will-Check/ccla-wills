@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20170326134345) do
     t.datetime "updated_at",             null: false
   end
 
-  create_table "testators", force: :cascade do |t|
+  create_table "wills", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "alt_last_name"
@@ -56,8 +56,8 @@ ActiveRecord::Schema.define(version: 20170326134345) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.integer  "firm_id"
-    t.index ["firm_id"], name: "index_testators_on_firm_id", using: :btree
+    t.index ["firm_id"], name: "index_wills_on_firm_id", using: :btree
   end
 
-  add_foreign_key "testators", "firms"
+  add_foreign_key "wills", "firms"
 end

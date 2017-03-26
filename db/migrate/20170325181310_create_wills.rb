@@ -1,6 +1,6 @@
-class CreateTestators < ActiveRecord::Migration[5.0]
+class CreateWills < ActiveRecord::Migration[5.0]
   def change
-    create_table :testators do |t|
+    create_table :wills do |t|
       t.string :first_name
       t.string :last_name
       t.string :alt_last_name

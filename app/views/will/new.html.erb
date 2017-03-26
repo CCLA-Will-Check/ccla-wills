@@ -3,11 +3,11 @@
 <p>To register a new will, please enter the following testator information:</p>
 
 <p>If you haven't already registered your firm with us, please do that now:</p>
-<%= link_to "Register Firm", "firm#new" %>
+<%= link_to "Register Firm", controller: :firm, action: :new %>
 </div>
 
     <em>* denotes a required field</em>
-    <%= form_for :testator, url: register_index_url do |f| %>
+    <%= form_for :will, url: will_index_url do |f| %>
       <table class="table">
         <tr><td>*Testator's first name:</td><td><%= f.text_field :first_name %></td></tr>
         <tr><td>*Testator's last name:</td><td><%= f.text_field :last_name %></td></tr>
