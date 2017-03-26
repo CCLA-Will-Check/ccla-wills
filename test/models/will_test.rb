@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TestatorTest < ActiveSupport::TestCase
+class WillTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
