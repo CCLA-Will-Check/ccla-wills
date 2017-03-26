@@ -2,7 +2,7 @@
     <p>Welcome to the County of Carleton Law Association Wills database. To request a will location, please enter testator information below.</p>
 
     <em>* denotes a required field</em>
-    <%= form_for :request do |f| %>
+    <%= form_for :request, url: request_index_url do |f| %>
       <table class="table">
         <tr><td>*Your name:</td><td><%= f.text_field :applicant %></td></tr>
         <tr><td>Your email:</td><td><%= f.text_field :email %></td></tr>
