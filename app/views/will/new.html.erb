@@ -2,8 +2,6 @@
 <div>
 <p>To register a new will, please enter the following testator information:</p>
 
-<p>If you haven't already registered your firm with us, please do that now:</p>
-<%= link_to "Register Firm", controller: :firm, action: :new %>
 </div>
 
     <em>* denotes a required field</em>
@@ -16,7 +14,6 @@
         <tr><td>*City of birth:</td><td><%= f.text_field :city_of_birth %></td></tr>
         <tr><td>Province of birth:</td><td><%= f.text_field :province_of_birth %></td></tr>
         <tr><td>Last resident in (city):</td><td><%= f.text_field :last_resided %></td></tr>
-        <tr><td>Firm:</td><td><%= f.collection_select :firm_id, Firm.order(:name),:id,:name,include_blank: true %></td></tr>
       </table>
       <%= f.submit "Register Will" %>
     <% end %>
