@@ -1,35 +1,104 @@
 <h1>CCLA Wills</h1>
 <div>
-<p>To register a new will, please enter the following testator information:</p>
+  <p>To register a new will, please enter the following testator information:</p>
 
 </div>
 
-    <em>* denotes a required field</em>
-    <%= form_for :will, url: will_index_url do |f| %>
-      <table class="table">
-        <tr><td>*Testator's first name:</td><td><%= f.text_field :first_name %></td></tr>
-        <tr><td>*Testator's last name:</td><td><%= f.text_field :last_name %></td></tr>
-        <tr><td>Testator's alternate name:</td><td><%= f.text_field :alt_last_name %></td></tr>
-        <tr><td>*Date of birth:</td><td><%= f.date_field :dob %></td></tr>
-        <tr><td>*City of birth:</td><td><%= f.text_field :city_of_birth %></td></tr>
-        <tr><td>Province of birth:</td><td><%= f.text_field :province_of_birth %></td></tr>
-        <tr><td>Country of birth:</td><td><%= f.text_field :country_of_birth %></td></tr>
-        <tr><td>Last resident in (city):</td><td><%= f.text_field :last_resided %></td></tr>
-        <tr><td>*Lawyer name:</td><td><%= f.text_field :lawyer_name %></td></tr>
-        <tr><td>*Firm name:</td><td><%= f.text_field :firm_name %></td></tr>
-        <tr><td>*LSUC number:</td><td><%= f.text_field :lsuc %></td></tr>
-        <tr><td>*Telephone number:</td><td><%= f.text_field :telephone %></td></tr>
-      </table>
-      <%= f.submit "Register Will" %>
-    <% end %>
-    <br /><br />
-    <p>To upload multiple wills, please download and use this template:</p>
-    <a href="/wills-blank.csv">wills-blank.csv</a>
-    <br /><br />
-    <p>Upload CSV data</p>
-    <br />
-    <%= form_tag({controller: :will, action: :import}, {multipart: true}) do %>
-      <%= file_field_tag :file %>
-      <%= submit_tag "Upload" %>
-    <% end %>
+<em>* denotes a required field</em>
+<%= form_for :will, url: will_index_url,:html => {:class => "form-inline"} do |f| %>
+  <div class: "form-group">
+    <%= f.label :first_name, "*Testator's first name:", class: "col-md-4 control-label" %>
+    <div class: "col-md-8">
+      <%= f.text_field :first_name, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class: "form-group">
+    <%= f.label :last_name, "*Testator's last name:", class: "col-md-4 control-label" %>
+    <div class: "col-md-8">
+      <%= f.text_field :last_name, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class: "form-group">
+    <%= f.label :alt_last_name, "Alternate last name:", class: "col-md-4 control-label" %>
+    <div class: "col-md-8">
+      <%= f.text_field :alt_last_name, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class: "form-group">
+    <%= f.label :dob, "*Date of Birth:", class: "col-md-4 control-label" %>
+    <div class: "col-md-8">
+      <%= f.date_field :dob, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class: "form-group">
+    <%= f.label :city_of_birth, "*City of Birth:", class: "col-md-4 control-label" %>
+    <div class: "col-md-8">
+      <%= f.text_field :city_of_birth, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class: "form-group">
+    <%= f.label :province_of_birth, "Province of Birth:", class: "col-md-4 control-label" %>
+    <div class: "col-md-8">
+      <%= f.text_field :province_of_birth, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class: "form-group">
+    <%= f.label :country_of_birth, "Country of Birth:", class: "col-md-4 control-label" %>
+    <div class: "col-md-8">
+      <%= f.text_field :country_of_birth, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class: "form-group">
+    <%= f.label :last_resided, "Last resided in (city):", class: "col-md-4 control-label" %>
+    <div class: "col-md-8">
+      <%= f.text_field :last_resided, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class: "form-group">
+    <%= f.label :lawyer_name, "*Lawyer name:", class: "col-md-4 control-label" %>
+    <div class: "col-md-8">
+      <%= f.text_field :lawyer_name, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class: "form-group">
+    <%= f.label :firm_name, "*Firm name:", class: "col-md-4 control-label" %>
+    <div class: "col-md-8">
+      <%= f.text_field :firm_name, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class: "form-group">
+    <%= f.label :lsuc, "*LSUC number:", class: "col-md-4 control-label" %>
+    <div class: "col-md-8">
+      <%= f.text_field :lsuc, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class: "form-group">
+    <%= f.label :telephone, "*Telephone number:", class: "col-md-4 control-label" %>
+    <div class: "col-md-8">
+      <%= f.text_field :telephone, class: "form-control" %>
+    </div>
+  </div>
+  <%= f.submit "Register Will", class: "btn btn-default btn-primary" %>
+<% end %>
+<br /><br />
+<p>To upload multiple wills, please download and use this template:</p>
+<a href="/wills-blank.csv">wills-blank.csv</a>
+<br /><br />
+<p>Upload CSV data</p>
+<br />
+<%= form_tag({controller: :will, action: :import}, {multipart: true}) do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Upload" %>
+<% end %>
 
