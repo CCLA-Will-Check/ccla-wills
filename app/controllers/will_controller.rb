@@ -9,14 +9,22 @@ class WillController < ApplicationController
   end
 
   def create
-    @will = Will.new(will_params)
-    if @will.save
-      @thank_you = "Thank you for registering with us. You registered the following will:"
-      render 'show'
+    if params[:id] == "search-form"
+      if params[:search]
+        @wills = Will.search(params[:search]).order('created_at DESC')
+      else
+        @wills = Will.all.order('created_at DESC')
+      end
+      render 'index'
     else
-      render 'new'
+      @will = Will.new(will_params)
+      if @will.save
+        @thank_you = "Thank you for registering with us. You registered the following will:"
+        render 'show'
+      else
+        render 'new'
+      end
     end
-
   end
 
   def show

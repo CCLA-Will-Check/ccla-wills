@@ -1,2 +1,5 @@
-<h1>Search#new</h1>
-<p>Find me in app/views/search/new.html.erb</p>
+<h1>Find a Will</h1>
+<%= form_tag(:controller => "will", :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Wills" %>
+  <%= submit_tag "Search" %>
+<% end %>
