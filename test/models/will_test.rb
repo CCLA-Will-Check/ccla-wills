@@ -31,4 +31,46 @@ class WillTest < ActiveSupport::TestCase
     will.city_of_birth = "Test City"
     assert_not will.save, "Saved the will without a country of birth"
   end
+  test "should not save will without a lawyer name" do
+    will = Will.new
+    will.first_name = "Test"
+    will.last_name = "Test"
+    will.dob = "2017-01-01"
+    will.city_of_birth = "Test City"
+    will.country_of_birth = "Test Country"
+    assert_not will.save, "Saved the will without a lawyer name"
+  end
+  test "should not save will without an LSUC number" do
+    will = Will.new
+    will.first_name = "Test"
+    will.last_name = "Test"
+    will.dob = "2017-01-01"
+    will.city_of_birth = "Test City"
+    will.country_of_birth = "Test Country"
+    will.lawyer_name = "Joe Blow"
+    assert_not will.save, "Saved the will without an LSUC number"
+  end
+  test "should not save will without a firm name" do
+    will = Will.new
+    will.first_name = "Test"
+    will.last_name = "Test"
+    will.dob = "2017-01-01"
+    will.city_of_birth = "Test City"
+    will.country_of_birth = "Test Country"
+    will.lawyer_name = "Joe Blow"
+    will.lsuc = "12345"
+    assert_not will.save, "Saved the will without a firm name"
+  end
+  test "should not save will without a telephone number" do
+    will = Will.new
+    will.first_name = "Test"
+    will.last_name = "Test"
+    will.dob = "2017-01-01"
+    will.city_of_birth = "Test City"
+    will.country_of_birth = "Test Country"
+    will.lawyer_name = "Joe Blow"
+    will.lsuc = "12345"
+    will.firm_name = "Test Firm"
+    assert_not will.save, "Saved the will without a telephone number"
+  end
 end
