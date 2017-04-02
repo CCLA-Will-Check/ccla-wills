@@ -13,4 +13,10 @@ class Will < ApplicationRecord
           or firm_name LIKE :search \
           or telephone LIKE :search", {search: "%#{search}%"})
   end
+
+  def self.import(file)
+    CSV.foreach(file.path, headers: true) do |row|
+      Will.create! row.to_hash
+    end
+  end
 end

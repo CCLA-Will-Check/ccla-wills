@@ -31,6 +31,11 @@ class WillController < ApplicationController
     @will = Will.find(params[:id])
   end
 
+  def import
+    Will.import(params[:file])
+    render 'success', notice: "Will(s) successfully imported"
+  end
+
 
   private
   def will_params

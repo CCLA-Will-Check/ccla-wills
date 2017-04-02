@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :request, :will, :search, :firm
+  post "will/import", to: "will#import"
 
 
 

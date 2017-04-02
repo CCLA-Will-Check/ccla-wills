@@ -23,3 +23,13 @@
       <%= f.submit "Register Will" %>
     <% end %>
     <br /><br />
+    <p>To upload multiple wills, please download and use this template:</p>
+    <a href="/wills-blank.csv">wills-blank.csv</a>
+    <br /><br />
+    <p>Upload CSV data</p>
+    <br />
+    <%= form_tag({controller: :will, action: :import}, {multipart: true}) do %>
+      <%= file_field_tag :file %>
+      <%= submit_tag "Upload" %>
+    <% end %>
+
