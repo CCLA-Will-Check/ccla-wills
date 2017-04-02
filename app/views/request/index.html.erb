@@ -13,3 +13,5 @@
     <td><%= request.testator_last_resident %></td></tr>
 <% end %>
 </table>
+
+<%= link_to 'Export to CSV', request_index_path(format: :csv) %>

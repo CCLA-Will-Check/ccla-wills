@@ -2,6 +2,13 @@ class RequestController < ApplicationController
 
   def index
     @requests = Request.all
+    respond_to do |format|
+      format.html
+      format.csv do
+        headers['Content-Disposition'] = "attachment; filename=\"user-list\""
+        headers['Content-Type'] ||= 'text/csv'
+      end
+    end
   end
 
   def new
