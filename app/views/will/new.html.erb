@@ -1,4 +1,6 @@
-<h1>CCLA Wills</h1>
+<div class= "row">
+<div class= "col-xs-6">
+<h1>Will Registration</h1>
 <div>
   <p>To register a new will, please enter the following testator information:</p>
 
@@ -6,99 +8,105 @@
 
 <em>* denotes a required field</em>
 <%= form_for :will, url: will_index_url,:html => {:class => "form-inline"} do |f| %>
-  <div class: "form-group">
-    <%= f.label :first_name, "*Testator's first name:", class: "col-md-4 control-label" %>
-    <div class: "col-md-8">
+  <div class= "form-group">
+    <%= f.label :first_name, "*Testator's first name:", class: "col-md-6 control-label" %>
+    <div class= "col-md-8">
       <%= f.text_field :first_name, class: "form-control" %>
     </div>
   </div>
 
-  <div class: "form-group">
-    <%= f.label :last_name, "*Testator's last name:", class: "col-md-4 control-label" %>
-    <div class: "col-md-8">
+  <div class= "form-group">
+    <%= f.label :last_name, "*Testator's last name:", class: "col-md-6 control-label" %>
+    <div class= "col-md-8">
       <%= f.text_field :last_name, class: "form-control" %>
     </div>
   </div>
 
-  <div class: "form-group">
-    <%= f.label :alt_last_name, "Alternate last name:", class: "col-md-4 control-label" %>
-    <div class: "col-md-8">
+  <div class= "form-group">
+    <%= f.label :alt_last_name, "Alternate last name:", class: "col-md-6 control-label" %>
+    <div class= "col-md-8">
       <%= f.text_field :alt_last_name, class: "form-control" %>
     </div>
   </div>
 
-  <div class: "form-group">
-    <%= f.label :dob, "*Date of Birth:", class: "col-md-4 control-label" %>
-    <div class: "col-md-8">
+  <div class= "form-group">
+    <%= f.label :dob, "*Date of Birth:", class: "col-md-6 control-label" %>
+    <div class= "col-md-8">
       <%= f.date_field :dob, class: "form-control" %>
     </div>
   </div>
 
-  <div class: "form-group">
-    <%= f.label :city_of_birth, "*City of Birth:", class: "col-md-4 control-label" %>
-    <div class: "col-md-8">
+  <div class= "form-group">
+    <%= f.label :city_of_birth, "*City of Birth:", class: "col-md-6 control-label" %>
+    <div class= "col-md-8">
       <%= f.text_field :city_of_birth, class: "form-control" %>
     </div>
   </div>
 
-  <div class: "form-group">
-    <%= f.label :province_of_birth, "Province of Birth:", class: "col-md-4 control-label" %>
-    <div class: "col-md-8">
+  <div class= "form-group">
+    <%= f.label :province_of_birth, "Province of Birth:", class: "col-md-6 control-label" %>
+    <div class= "col-md-8">
       <%= f.text_field :province_of_birth, class: "form-control" %>
     </div>
   </div>
 
-  <div class: "form-group">
-    <%= f.label :country_of_birth, "Country of Birth:", class: "col-md-4 control-label" %>
-    <div class: "col-md-8">
+  <div class= "form-group">
+    <%= f.label :country_of_birth, "Country of Birth:", class: "col-md-6 control-label" %>
+    <div class= "col-md-8">
       <%= f.text_field :country_of_birth, class: "form-control" %>
     </div>
   </div>
 
-  <div class: "form-group">
-    <%= f.label :last_resided, "Last resided in (city):", class: "col-md-4 control-label" %>
-    <div class: "col-md-8">
+  <div class= "form-group">
+    <%= f.label :last_resided, "Last resided in (city):", class: "col-md-6 control-label" %>
+    <div class= "col-md-8">
       <%= f.text_field :last_resided, class: "form-control" %>
     </div>
   </div>
 
-  <div class: "form-group">
-    <%= f.label :lawyer_name, "*Lawyer name:", class: "col-md-4 control-label" %>
-    <div class: "col-md-8">
+  <div class= "form-group">
+    <%= f.label :lawyer_name, "*Lawyer name:", class: "col-md-6 control-label" %>
+    <div class= "col-md-8">
       <%= f.text_field :lawyer_name, class: "form-control" %>
     </div>
   </div>
 
-  <div class: "form-group">
-    <%= f.label :firm_name, "*Firm name:", class: "col-md-4 control-label" %>
-    <div class: "col-md-8">
+  <div class= "form-group">
+    <%= f.label :firm_name, "*Firm name:", class: "col-md-6 control-label" %>
+    <div class= "col-md-8">
       <%= f.text_field :firm_name, class: "form-control" %>
     </div>
   </div>
 
-  <div class: "form-group">
-    <%= f.label :lsuc, "*LSUC number:", class: "col-md-4 control-label" %>
-    <div class: "col-md-8">
+  <div class= "form-group">
+    <%= f.label :lsuc, "*LSUC number:", class: "col-md-6 control-label" %>
+    <div class= "col-md-8">
       <%= f.text_field :lsuc, class: "form-control" %>
     </div>
   </div>
 
-  <div class: "form-group">
-    <%= f.label :telephone, "*Telephone number:", class: "col-md-4 control-label" %>
-    <div class: "col-md-8">
+  <div class= "form-group">
+    <%= f.label :telephone, "*Telephone number:", class: "col-md-6 control-label" %>
+    <div class= "col-md-8">
       <%= f.text_field :telephone, class: "form-control" %>
     </div>
   </div>
-  <%= f.submit "Register Will", class: "btn btn-default btn-primary" %>
+  <div id="submit">
+    <%= f.submit "Register Will", class: "btn btn-default btn-primary" %>
+  </div>
 <% end %>
-<br /><br />
+</div>
+<div id="multi-upload" class="col-xs-6">
 <p>To upload multiple wills, please download and use this template:</p>
 <a href="/wills-blank.csv">wills-blank.csv</a>
 <br /><br />
 <p>Upload CSV data</p>
 <br />
-<%= form_tag({controller: :will, action: :import}, {multipart: true}) do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Upload" %>
+<%= form_tag({controller: :will, action: :import, class: "form-inline"}, {multipart: true}) do %>
+  <div class= "form-group">
+    <%= file_field_tag :file, class: "btn btn-default btn-primary" %>
+  </div>
+  <%= submit_tag "Upload", class: "btn btn-default btn-primary" %>
 <% end %>
-
+</div>
+</div>

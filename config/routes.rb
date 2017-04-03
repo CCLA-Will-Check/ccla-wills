@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
+  root 'request#new'
   resources :request, :will, :search, :firm
   post "will/import", to: "will#import"
+
 
 
 

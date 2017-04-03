@@ -9,14 +9,21 @@
   </head>
 
   <body>
-<div id="main-container" class="container-fluid">
+    <div id="main-container" class="container-fluid">
+      <h1><strong>CCLA Wills</strong></h1>
 <div class="row">
-  <div id="sidebar" class="col-xs-3">
-    <%= link_to "Find a Will", controller: :request, action: :new %><br />
-    <%= link_to "Register a Will", controller: :will, action: :new %><br />
-    <%= link_to "Search (authentication required)", controller: :search, action: :index %>
+  <div id="sidebar" class="col-xs-2">
+      <div class="nav-item">
+        <%= link_to "Find a Will", {controller: :request, action: :new}, class: "btn btn-default btn-primary" %>
+      </div>
+      <div class="nav-item">
+        <%= link_to "Register a Will", {controller: :will, action: :new}, class: "btn btn-default btn-primary" %>
+      </div>
+      <div class="nav-item">
+        <%= link_to "Search (staff only)", {controller: :search, action: :index}, class: "btn btn-default btn-primary" %>
+      </div>
   </div>
-  <div id="content" class="col-xs-9">
+  <div id="content" class="col-xs-10">
     <%= yield %>
   </div>
 </div>

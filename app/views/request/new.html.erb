@@ -1,77 +1,82 @@
-    <h1>CCLA Wills</h1>
+<div class= "row">
+<div class= "col-xs-6">
+    <h1>Will Request Form</h1>
     <p>Welcome to the County of Carleton Law Association Wills database. To request a will location, please enter testator information below.</p>
 
     <em>* denotes a required field</em>
     <%= form_for :request, url: request_index_url, :html => {:class => "form-inline"} do |f| %>
-  <div class: "form-group">
-    <%= f.label :applicant, "*Your name:", class: "col-md-4 control-label" %>
-    <div class: "col-md-8">
+  <div class= "form-group">
+    <%= f.label :applicant, "*Your name:", class: "col-md-6 control-label" %>
+    <div class= "col-md-8">
       <%= f.text_field :applicant, class: "form-control" %>
     </div>
   </div>
 
-  <div class: "form-group">
-    <%= f.label :email, "Your email:", class: "col-md-4 control-label" %>
-    <div class: "col-md-8">
+  <div class= "form-group">
+    <%= f.label :email, "Your email:", class: "col-md-6 control-label" %>
+    <div class= "col-md-8">
       <%= f.text_field :email, class: "form-control" %>
     </div>
   </div>
 
-  <div class: "form-group">
-    <%= f.label :telephone, "Your telephone:", class: "col-md-4 control-label" %>
-    <div class: "col-md-8">
+  <div class= "form-group">
+    <%= f.label :telephone, "Your telephone:", class: "col-md-6 control-label" %>
+    <div class= "col-md-8">
       <%= f.text_field :telephone, class: "form-control" %>
     </div>
   </div>
 
-  <div class: "form-group">
-    <%= f.label :testator_first, "*Testator's first name:", class: "col-md-4 control-label" %>
-    <div class: "col-md-8">
+  <div class= "form-group">
+    <%= f.label :testator_first, "*Testator's first name:", class: "col-md-6 control-label" %>
+    <div class= "col-md-8">
       <%= f.text_field :testator_first, class: "form-control" %>
     </div>
   </div>
 
-  <div class: "form-group">
-    <%= f.label :testator_last, "*Testator's last name:", class: "col-md-4 control-label" %>
-    <div class: "col-md-8">
+  <div class= "form-group">
+    <%= f.label :testator_last, "*Testator's last name:", class: "col-md-6 control-label" %>
+    <div class= "col-md-8">
       <%= f.text_field :testator_last, class: "form-control" %>
     </div>
   </div>
 
-  <div class: "form-group">
-    <%= f.label :testator_alt, "Alternate last name:", class: "col-md-4 control-label" %>
-    <div class: "col-md-8">
+  <div class= "form-group">
+    <%= f.label :testator_alt, "Alternate last name:", class: "col-md-6 control-label" %>
+    <div class= "col-md-8">
       <%= f.text_field :testator_alt, class: "form-control" %>
     </div>
   </div>
 
-  <div class: "form-group">
-    <%= f.label :testator_dob, "*Date of birth:", class: "col-md-4 control-label" %>
-    <div class: "col-md-8">
+  <div class= "form-group">
+    <%= f.label :testator_dob, "*Date of birth:", class: "col-md-6 control-label" %>
+    <div class= "col-md-8">
       <%= f.text_field :testator_dob, class: "form-control" %>
     </div>
   </div>
 
-  <div class: "form-group">
-    <%= f.label :testator_city, "*City of birth:", class: "col-md-4 control-label" %>
-    <div class: "col-md-8">
+  <div class= "form-group">
+    <%= f.label :testator_city, "*City of birth:", class: "col-md-6 control-label" %>
+    <div class= "col-md-8">
       <%= f.text_field :testator_city, class: "form-control" %>
     </div>
   </div>
 
-  <div class: "form-group">
-    <%= f.label :testator_province, "Province of birth:", class: "col-md-4 control-label" %>
-    <div class: "col-md-8">
+  <div class= "form-group">
+    <%= f.label :testator_province, "Province of birth:", class: "col-md-6 control-label" %>
+    <div class= "col-md-8">
       <%= f.text_field :testator_province, class: "form-control" %>
     </div>
   </div>
 
-  <div class: "form-group">
-    <%= f.label :testator_last_resident, "Last resided in (city):", class: "col-md-4 control-label" %>
-    <div class: "col-md-8">
+  <div class= "form-group">
+    <%= f.label :testator_last_resident, "Last resided in (city):", class: "col-md-6 control-label" %>
+    <div class= "col-md-8">
       <%= f.text_field :testator_last_resident, class: "form-control" %>
     </div>
   </div>
-      <%= f.submit "Submit Request", class: "btn btn-default btn-primary" %>
+  <div id="submit">
+    <%= f.submit "Submit Request", class: "btn btn-default btn-primary" %>
+  </div>
     <% end %>
-    <br /><br />
+</div>
+</div>
