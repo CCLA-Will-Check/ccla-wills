@@ -1,7 +1,12 @@
 class RequestController < ApplicationController
 
   def index
-    @requests = Request.all
+    status = params[:status] || "All"
+    if status == "All"
+      @requests = Request.all
+    else
+      @requests = Request.where(status: status)
+    end
     respond_to do |format|
       format.html
       format.csv do

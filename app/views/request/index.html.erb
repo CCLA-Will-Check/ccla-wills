@@ -1,3 +1,8 @@
+
+Display <%= form_tag "/request", method: 'get' do %><%= select_tag 'status', '<option>All</option><option>New</option><option>In Progress</option><option>Closed</option>'.html_safe %> <%= submit_tag 'Go' %><% end %>
+
+<%= @status %>
+
 <table class="table">
 <tr><th>Applicant</th><th>Email</th><th>Telephone</th><th>Testator</th><th>Testator Alt. Name</th><th>DOB</th><th>City</th><th>Province</th><th>Last Resided In</th><th>Status</th></tr>
 <% for request in @requests do %>
