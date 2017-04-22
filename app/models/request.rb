@@ -4,4 +4,5 @@ class Request < ApplicationRecord
   validates :testator_last, presence: true
   validates :testator_dob, presence: true
   validates :testator_city, presence: true
+  validates :status, presence: true
 end

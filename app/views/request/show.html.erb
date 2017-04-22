@@ -3,14 +3,17 @@
 <br />
 <p>Your request contained the following data:</p>
 <table>
-  <tr><td><%= @request.applicant %></td></tr>
-  <tr><td><%= @request.email %></td></tr>
-  <tr><td><%= @request.telephone %></td></tr>
-  <tr><td><%= @request.testator_first %> <%= @request.testator_last %></td></tr>
-  <tr><td><%= @request.testator_alt %></td</tr>
-  <tr><td><%= @request.testator_dob %></td></tr>
-  <tr><td><%= @request.testator_city %></td></tr>
-  <tr><td><%= @request.testator_province %></td></tr>
-  <tr><td><%= @request.testator_country %></td></tr>
-  <tr><td><%= @request.testator_last_resident %></td></tr>
-</table
+  <tr><td><strong>Applicant: </strong></td><td><%= @request.applicant %></td></tr>
+  <tr><td><strong>Email: </strong></td><td><%= @request.email %></td></tr>
+  <tr><td><strong>Telephone: </strong></td><td><%= @request.telephone %></td></tr>
+  <tr><td><strong>Testator Name: </strong></td><td><%= @request.testator_first %> <%= @request.testator_last %></td></tr>
+  <tr><td><strong>Alternate Name: </strong></td><td><%= @request.testator_alt %></td</tr>
+  <tr><td><strong>Date of Birth: </strong></td><td><%= @request.testator_dob %></td></tr>
+  <tr><td><strong>City of Birth: </strong></td><td><%= @request.testator_city %></td></tr>
+  <tr><td><strong>Province of Birth: </strong></td><td><%= @request.testator_province %></td></tr>
+  <tr><td><strong>Country of Birth: </strong></td><td><%= @request.testator_country %></td></tr>
+  <tr><td><strong>Last Resided In: </strong></td><td><%= @request.testator_last_resident %></td></tr>
+  <tr><td><strong>Request Status: </strong></td><td><%= @request.status %></td</tr>
+</table>
+
+<%= link_to 'Change Status', action: "edit", class: "btn btn-default btn-primary" %>

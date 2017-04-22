@@ -39,6 +39,6 @@ class WillController < ApplicationController
 
   private
   def will_params
-    params.require(:will).permit(:first_name, :last_name, :alt_last_name, :dob, :city_of_birth, :province_of_birth, :country_of_birth, :last_resided, :lawyer_name, :firm_name, :lsuc, :telephone)
+    params.require(:will).permit(:first_name, :last_name, :alt_last_name, :dob, :city_of_birth, :province_of_birth, :country_of_birth, :last_resided, :lawyer_name, :firm_name, :lsuc, :telephone, :year)
   end
 end

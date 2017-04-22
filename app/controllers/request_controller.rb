@@ -15,6 +15,19 @@ class RequestController < ApplicationController
     @request = Request.new
   end
 
+  def edit
+    @request = Request.find(params[:id])
+  end
+
+  def update
+    @request = Request.find(params[:id])
+    if @request.update_attributes(request_params)
+      render 'show'
+    else
+      render 'edit'
+    end
+  end
+
   def create
     @request = Request.new(request_params)
     if @request.save
@@ -32,6 +45,6 @@ class RequestController < ApplicationController
 
   private
   def request_params
-    params.require(:request).permit(:applicant, :testator_first, :testator_last, :testator_dob, :testator_city, :email, :telephone, :testator_alt, :testator_province, :testator_country, :testator_last_resident)
+    params.require(:request).permit(:applicant, :testator_first, :testator_last, :testator_dob, :testator_city, :email, :telephone, :testator_alt, :testator_province, :testator_country, :testator_last_resident, :status)
   end
 end
