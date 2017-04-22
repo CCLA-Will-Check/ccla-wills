@@ -1,8 +1,7 @@
 
 Display <%= form_tag "/request", method: 'get' do %><%= select_tag 'status', '<option>All</option><option>New</option><option>In Progress</option><option>Closed</option>'.html_safe %> <%= submit_tag 'Go' %><% end %>
 
-<%= @status %>
-
+<% if @requests %>
 <table class="table">
 <tr><th>Applicant</th><th>Email</th><th>Telephone</th><th>Testator</th><th>Testator Alt. Name</th><th>DOB</th><th>City</th><th>Province</th><th>Last Resided In</th><th>Status</th></tr>
 <% for request in @requests do %>
@@ -17,7 +16,16 @@ Display <%= form_tag "/request", method: 'get' do %><%= select_tag 'status', '<o
     <td><%= request.testator_province %></td>
     <td><%= request.testator_last_resident %></td>
     <td><%= request.status %></td></tr>
+  <td><%= link_to "Delete", request, method: :delete, data: {confirm: "Are You Sure?"} %>
 <% end %>
 </table>
 
 <%= link_to 'Export to CSV', request_index_path(format: :csv), class: "btn btn-default btn-primary" %>
+
+<% else %>
+
+  <p>There are currently no requests in the system.</p>
+
+<% end %>
+
+
