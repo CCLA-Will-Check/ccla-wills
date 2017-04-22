@@ -73,4 +73,17 @@ class WillTest < ActiveSupport::TestCase
     will.firm_name = "Test Firm"
     assert_not will.save, "Saved the will without a telephone number"
   end
+  test "should not save will without a year" do
+    will = Will.new
+    will.first_name = "Test"
+    will.last_name = "Test"
+    will.dob = "2017-01-01"
+    will.city_of_birth = "Test City"
+    will.country_of_birth = "Test Country"
+    will.lawyer_name = "Joe Blow"
+    will.lsuc = "12345"
+    will.firm_name = "Test Firm"
+    will.telephone = "780-555-5555"
+    assert_not will.save, "Saved the will without a year"
+  end
 end

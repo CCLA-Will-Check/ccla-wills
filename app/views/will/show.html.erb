@@ -1,14 +1,15 @@
 <%= @thank_you if @thank_you %>
 <table>
-  <tr><td><%= @will.first_name %> <%= @will.last_name %></td></tr>
-  <tr><td><%= @will.alt_last_name %></td</tr>
-  <tr><td><%= @will.dob %></td></tr>
-  <tr><td><%= @will.city_of_birth %></td></tr>
-  <tr><td><%= @will.province_of_birth %></td></tr>
-  <tr><td><%= @will.country_of_birth %></td></tr>
-  <tr><td><%= @will.last_resided %></td></tr>
-  <tr><td><%= @will.lawyer_name %></td></tr>
-  <tr><td><%= @will.firm_name %></td></tr>
-  <tr><td><%= @will.lsuc %></td></tr>
-  <tr><td><%= @will.telephone %></td></tr>
+  <tr><td><strong>Name: </td><td><%= @will.first_name %> <%= @will.last_name %></td></tr>
+  <tr><td><strong>Alternate Name: </td><td><%= @will.alt_last_name %></td</tr>
+  <tr><td><strong>Date of Birth: </td><td><%= @will.dob %></td></tr>
+  <tr><td><strong>City of Birth: </td><td><%= @will.city_of_birth %></td></tr>
+  <tr><td><strong>Province of Birth: </td><td><%= @will.province_of_birth %></td></tr>
+  <tr><td><strong>Country of Birth: </td><td><%= @will.country_of_birth %></td></tr>
+  <tr><td><strong>Last Resided In: </td><td><%= @will.last_resided %></td></tr>
+  <tr><td><strong>Lawyer: </td><td><%= @will.lawyer_name %></td></tr>
+  <tr><td><strong>Firm: </td><td><%= @will.firm_name %></td></tr>
+  <tr><td><strong>LSUC: </td><td><%= @will.lsuc %></td></tr>
+  <tr><td><strong>Telephone: </td><td><%= @will.telephone %></td></tr>
+  <tr><td><strong>Will Year: </td><td><%= @will.year %></td></tr>
 </table
