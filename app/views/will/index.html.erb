@@ -1,9 +1,10 @@
 <table class="table">
-<tr><th>Name</th><th>Date of Birth</th><th>Year</th></tr>
+<tr><th>Name</th><th>Year</th><th>Date Created</th></tr>
 <% for will in @wills do %>
   <tr>
     <td><%= link_to "#{will.first_name} #{will.last_name}", will %></td>
-    <td><%= will.dob %></td>
-    <td><%= will.year %></td></tr>
+    <td><%= will.year %></td>
+    <td><%= will.created_at %>
+  </tr>
 <% end %>
 </table>
