@@ -1,3 +1,10 @@
+Will Check is a registry which stores information on the location of
+wills in Eastern Ontario. Will Check is currently offered free-of-charge
+to lawyers in Eastern Ontario, through the County of Carleton Law
+Association.
+
+Will Check is a Ruby on Rails application with a PostgreSQL database.
+
 1. Dependencies
     * Ruby >= 2.3.0
     * Rails >= 5.0.0
