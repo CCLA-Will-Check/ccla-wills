@@ -2,6 +2,8 @@
 <%= form_tag(:controller => "will", :method => "get", id: "search-form", class: "form-inline") do %>
   <div class="form-group">
     <%= text_field_tag :search, params[:search], placeholder: "Search Wills" %>
+    <br /><br />
+    <p>NOTE: to search for a date, you must use the full date in the format YYYY-MM-DD (e.g. 1968-01-01)</p>
   </div>
   <div id="submit">
     <%= submit_tag "Search", class: "btn btn-default btn-primary" %>
