@@ -16,4 +16,4 @@
   <tr><td><strong>Request Status: </strong></td><td><%= @request.status %></td</tr>
 </table>
 
-<%= link_to 'Change Status', action: "edit", class: "btn btn-default btn-primary" %>
+<%= button_to 'Change Status', {action: "edit"}, class: "btn btn-default btn-primary", method: :get %>
