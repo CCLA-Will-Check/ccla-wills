@@ -1,5 +1,5 @@
 body{
-  background-color: LightBlue;
+  background-color: MidnightBlue;
   font-family: Trebuchet, sans-serif;
   padding: 10px;
 
@@ -66,5 +66,41 @@ form-group{
 
 .form-group {
   margin: 10px;
+}
+
+.welcome {
+  background-color: White;
+  text-align: center;
+  height: 600px;
+}
+
+.logo {
+  width: 25%;
+}
+
+.ccla {
+  padding: 20px;
+  height: 25%;
+}
+
+.welcome table{
+  width: 100%;
+  background-color: Gray;
+  margin-bottom: 10px;
+}
+
+.welcome table td{
+  padding: 5px;
+}
+
+.welcome #blurb {
+  width: 45%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#links .btn {
+  background-color: MidnightBlue;
+  margin: 30px;
 }
 
