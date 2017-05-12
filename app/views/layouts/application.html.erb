@@ -24,10 +24,6 @@
           <div class="nav-item">
             <%= link_to "Search (staff only)", {controller: :search, action: :index}, class: "btn btn-default btn-primary" %>
           </div>
-          <% else %>
-            <div class="nav-item">
-              <%= link_to "Log in", login_path, class: "btn btn-default btn-primary" %>
-            </div>
           <% end %>
           <div class="nav-item">
             <%= link_to "Find a Will", {controller: :request, action: :new}, class: "btn btn-default btn-primary" %>
