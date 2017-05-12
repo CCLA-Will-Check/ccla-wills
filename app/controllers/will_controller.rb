@@ -1,4 +1,5 @@
 class WillController < ApplicationController
+  before_action :logged_in_user, only: [:index]
 
   def index
     @wills = Will.all
@@ -40,5 +41,12 @@ class WillController < ApplicationController
   private
   def will_params
     params.require(:will).permit(:first_name, :last_name, :alt_last_name, :dob, :city_of_birth, :province_of_birth, :country_of_birth, :last_resided, :lawyer_name, :firm_name, :lsuc, :telephone, :year)
+  end
+
+  def logged_in_user
+    unless logged_in?
+      flash[:danger] = "Please log in."
+      redirect_to login_url
+    end
   end
 end

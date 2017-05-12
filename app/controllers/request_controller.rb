@@ -1,4 +1,5 @@
 class RequestController < ApplicationController
+  before_action :logged_in_user, only: [:index]
 
   def index
     status = params[:status] || "All"
@@ -58,5 +59,12 @@ class RequestController < ApplicationController
   private
   def request_params
     params.require(:request).permit(:applicant, :testator_first, :testator_last, :testator_dob, :testator_city, :email, :telephone, :testator_alt, :testator_province, :testator_country, :testator_last_resident, :status)
+  end
+
+  def logged_in_user
+    unless logged_in?
+      flash[:danger] = "Please log in."
+      redirect_to login_url
+    end
   end
 end
