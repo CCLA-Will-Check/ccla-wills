@@ -11,7 +11,7 @@ Will Check is a Ruby on Rails application with a PostgreSQL database.
     * PostgreSQL
     
 2. Installation instructions (development)
-   * Clone repo (`git clone http://github.com/redlibrarian/ccla-wills.git`)
+   * Clone repo (`git clone http://github.com/CCLA-Will-Check/ccla-wills.git`)
    * Install dependencies (`bundle install`)
    * Migrate database (`rake db:migrate`)
    * Load test data (`rake db:seed`)
@@ -21,7 +21,7 @@ Will Check is a Ruby on Rails application with a PostgreSQL database.
    * Set up web server (Apache, Nginx)
    * Set up app server (if desired) (e.g [Phusion Passenger](https://www.phusionpassenger.com/))
    * Postgres Database
-   * Clone repo (`git clone http://github.com/redlibrarian/ccla-wills.git`)
+   * Clone repo (`git clone http://github.com/CCLA-Will-Check/ccla-wills.git`)
    * Install dependencies (`bundle install`)
    * Migrate database (`rake db:migrate`)
    * Configure web and app servers
