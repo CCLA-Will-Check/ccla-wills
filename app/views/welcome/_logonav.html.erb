@@ -1,0 +1,11 @@
+<%= image_tag("wclogo-letterbox.png", class: "logo") %>
+<% @curr_page = request.env['PATH_INFO'] %>
+<div id="link-bar">
+  <table>
+    <tr>
+      <% if @curr_page != "/" %>
+        <td><a href="/">HOME</a></td>
+      <% end %>
+      <td><a href="/instructions">INSTRUCTIONS</a></td><td><a href="/release">RELEASE</a></td><td><a href="/faq">FAQ</a></td><td><a href="/contact">CONTACT</a></td></tr>
+  </table>
+</div>

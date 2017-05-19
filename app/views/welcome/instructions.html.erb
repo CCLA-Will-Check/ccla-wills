@@ -1,14 +1,17 @@
-<div class="welcome content">
-  <h2>Instructions</h2>
-<h3>Will Check is easy to use!</h3>
+<div class="welcome">
+  <%= render "logonav" %>
+  <div class="content">
+    <h2>Instructions</h2>
+    <h3>Will Check is easy to use!</h3>
 
-<strong>To Submit Will Information:</strong>
+    <strong>To Submit Will Information:</strong>
 
-<ol><li>Review the client release with your client and have them sign a copy for you.</li>
-  <li>Submit information to us using our <%= link_to 'Register a Will', {controller: :will, action: :new} %> form.</li>
-  <li><em>Optional!</em> If you’d rather wait until the end of every month / quarter / year to submit information, you can fill out <a href="/wills-check.csv">this .csv file</a>. Once you’re done, upload the file for us on the <%= link_to 'Register a Will', {controller: :will, action: :new} %> page.</li></ol>
+    <ol><li>Review the client release with your client and have them sign a copy for you.</li>
+      <li>Submit information to us using our <%= link_to 'Register a Will', {controller: :will, action: :new} %> form.</li>
+      <li><em>Optional!</em> If you’d rather wait until the end of every month / quarter / year to submit information, you can fill out <a href="/wills-check.csv">this .csv file</a>. Once you’re done, upload the file for us on the <%= link_to 'Register a Will', {controller: :will, action: :new} %> page.</li></ol>
 
-<strong>To Search for Will Information:</strong>
-<ol><li>Fill out the form on the <%= link_to 'Find a Will', {controller: :request, action: :new} %> page.</li>
-  <li>That’s it! We’ll contact you within 2 business days.</li></ol>
+    <strong>To Search for Will Information:</strong>
+    <ol><li>Fill out the form on the <%= link_to 'Find a Will', {controller: :request, action: :new} %> page.</li>
+      <li>That’s it! We’ll contact you within 2 business days.</li></ol>
+  </div>
 </div>

@@ -1,15 +1,18 @@
-<div class="welcome content">
-  <h2>Will Check FAQ</h2>
+<div class="welcome">
+  <%= render "logonav" %>
+  <div class="content">
+    <h2>Will Check FAQ</h2>
 
-  <ol>
-    <li>Who runs this website?<br /><p>Will Check is a service run by the County of Carleton Law Association library. You can find out more about us <a href="http://www.ccla-abcc.ca/?page=Library" target="_blank">here</a>. Funding for Will Check was made available through the <a href="http://www.fola.ca/" target="_blank">Federation of Ontario Law Associations (FOLA)</a> 2016 Practice Resource Centre Innovation Award.</p></li>
-    <li>How much does Will Check cost?<br /><p>There is no cost associated with providing client information to Will Check. At the current time, searches for information stored within our database are free.</p></li>
-    <li>What security precautions are in place for this information?<br /><p>For the security of the testator, full wills are not stored within Will Check; we only store the information about the lawyer or firm where the will is being kept. For more details, please consult our <a href="#">privacy policy</a> and <a href="#">terms of use</a>.</p></li>
-    <li>How can I secure consent from my client?<br /><p>We’ve drawn up a sample release for you to use. Copy and paste this into your own letterhead, or go ahead and use ours. You can find a Word document version of this release here.</p></li>
-    <li>How do I give you information about a will?<br /><p>Check out the step-by- step guide <a href="/instructions">here</a>.</p></li>
-    <li>How do I search the database?<br /><p>Just fill in <%= link_to 'this form', {controller: :request, action: :new} %>. We’ll get back to you within two business days. At this time, search requests will only be performed for members of the LSUC or equivalent.</p></li>
-    <li>I’m not from Ottawa – can I submit information to you?<br /><p>At this time, we are only accepting wills information from lawyers practicing in the Ottawa area.</p</li>
-    <li>How far back does your information go?<br /><p>Will Check started collecting will information in 2017. As such, the information in this database is largely comprised of will information from this time.</p></li>
-    <li>I am not a lawyer, but I want my information in Will Check. How do I submit?<br /><p>Please speak with the lawyer who wrote your will, and have them submit the information to us. You can tell them to check out our website at WillCheck.ca.</p></li>
-    <li>Est-ce disponible en français?<br /><strong>Will Check</strong> n’est présentement disponible qu’en anglais. Nous espérons de le rendre bilingue  à l’avenir.</p></li></ol>
+    <ol>
+      <li>Who runs this website?<br /><p>Will Check is a service run by the County of Carleton Law Association library. You can find out more about us <a href="http://www.ccla-abcc.ca/?page=Library" target="_blank">here</a>. Funding for Will Check was made available through the <a href="http://www.fola.ca/" target="_blank">Federation of Ontario Law Associations (FOLA)</a> 2016 Practice Resource Centre Innovation Award.</p></li>
+      <li>How much does Will Check cost?<br /><p>There is no cost associated with providing client information to Will Check. At the current time, searches for information stored within our database are free.</p></li>
+      <li>What security precautions are in place for this information?<br /><p>For the security of the testator, full wills are not stored within Will Check; we only store the information about the lawyer or firm where the will is being kept. For more details, please consult our <a href="#">privacy policy</a> and <a href="#">terms of use</a>.</p></li>
+      <li>How can I secure consent from my client?<br /><p>We’ve drawn up a sample release for you to use. Copy and paste this into your own letterhead, or go ahead and use ours. You can find a Word document version of this release here.</p></li>
+      <li>How do I give you information about a will?<br /><p>Check out the step-by- step guide <a href="/instructions">here</a>.</p></li>
+      <li>How do I search the database?<br /><p>Just fill in <%= link_to 'this form', {controller: :request, action: :new} %>. We’ll get back to you within two business days. At this time, search requests will only be performed for members of the LSUC or equivalent.</p></li>
+      <li>I’m not from Ottawa – can I submit information to you?<br /><p>At this time, we are only accepting wills information from lawyers practicing in the Ottawa area.</p</li>
+      <li>How far back does your information go?<br /><p>Will Check started collecting will information in 2017. As such, the information in this database is largely comprised of will information from this time.</p></li>
+      <li>I am not a lawyer, but I want my information in Will Check. How do I submit?<br /><p>Please speak with the lawyer who wrote your will, and have them submit the information to us. You can tell them to check out our website at WillCheck.ca.</p></li>
+      <li>Est-ce disponible en français?<br /><strong>Will Check</strong> n’est présentement disponible qu’en anglais. Nous espérons de le rendre bilingue  à l’avenir.</p></li></ol>
+  </div>
 </div>
