@@ -12,7 +12,7 @@
     <div id="main-container" class="container-fluid">
       <div class="row">
         <div id="sidebar" class="col-xs-2">
-          <%= image_tag "WCLogo-trans.png", class: "sidebar-logo" %>
+          <%= link_to image_tag("WCLogo-trans.png", class: "wc-logo"), controller: :welcome,  action: :index %>
           <div class="menu">
             <% if logged_in? %>
               <p><strong>Logged in as</strong> <%= current_user.name %></p>
@@ -33,7 +33,7 @@
               <%= link_to "Register a Will", {controller: :will, action: :new}, class: "btn btn-default btn-primary" %>
             </div>
           </div>
-          <%= image_tag "cclacenprigrayrgb300-small.png", class: "sidebar-logo" %>
+          <%= image_tag "cclacenprigrayrgb300-small.png", class: "ccla-logo" %>
         </div>
         <div id="content" class="col-xs-10">
           <%= yield %>

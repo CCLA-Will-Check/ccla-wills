@@ -8,6 +8,7 @@
 
 <em>* denotes a required field</em>
 <%= form_for :will, url: will_index_url,:html => {:class => "form-inline"} do |f| %>
+  <div class="form-label"><strong>Testator Information</strong></div>
   <div class= "form-group">
     <%= f.label :first_name, "*Testator's first name:", class: "col-md-6 control-label" %>
     <div class= "col-md-6">
@@ -64,6 +65,7 @@
     </div>
   </div>
 
+  <div class="form-label"><strong>Present Location of Will</strong></div>
   <div class= "form-group">
     <%= f.label :lawyer_name, "*Lawyer name:", class: "col-md-6 control-label" %>
     <div class= "col-md-6">
