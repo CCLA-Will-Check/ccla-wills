@@ -14,7 +14,10 @@ Rails.application.routes.draw do
   post '/signup',  to: 'users#create'
   resources :request, :will, :search, :users
   post "will/import", to: "will#import"
-
+  get '/instructions', to: "welcome#instructions"
+  get '/faq', to: "welcome#faq"
+  get '/release', to: "welcome#release"
+  get '/contact', to: "welcome#contact"
 
 
 
