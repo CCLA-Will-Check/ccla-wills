@@ -1,4 +1,4 @@
-Display <%= form_tag "/will", method: 'get' do %><%= select_tag 'approved', '<option value="false">All</option><option value="true">Approved</option>'.html_safe %> <%= submit_tag 'Go' %><% end %>
+Display <%= form_tag "/will", method: 'get' do %><%= select_tag 'approved', '<option value="all">All</option><option value="true">Approved</option><option value="false">Not approved</option>'.html_safe %> <%= submit_tag 'Go' %><% end %>
 <% if @wills %>
   <table class="table">
     <tr><th>Name</th><th>Year</th><th>Date Created</th></tr>

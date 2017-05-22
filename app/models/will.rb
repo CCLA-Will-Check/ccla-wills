@@ -18,7 +18,7 @@ class Will < ApplicationRecord
 
   def self.import(file)
     CSV.foreach(file.path, headers: true) do |row|
-      Will.create! row.to_hash
+      Will.create! row.to_hash.merge({"approved" => false})
     end
   end
 end

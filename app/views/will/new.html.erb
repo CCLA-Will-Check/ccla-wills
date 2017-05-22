@@ -99,6 +99,11 @@
       <%= f.text_field :year, class: "form-control" %>
     </div>
   </div>
+  <div class= "form-group">
+    <div class= "col-md-6">
+      <%= f.hidden_field :approved, value: false, class: "form-control" %>
+    </div>
+  </div>
   <div id="submit">
     <%= f.submit "Register Will", class: "btn btn-default btn-primary" %>
   </div>

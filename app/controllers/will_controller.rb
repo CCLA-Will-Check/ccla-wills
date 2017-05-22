@@ -5,6 +5,8 @@ class WillController < ApplicationController
     approved = params['approved']
     if approved == 'true'
       @wills = Will.where(approved: true)
+    elsif approved == 'false'
+      @wills = Will.where(approved: false)
     else
       @wills = Will.all
     end
@@ -41,7 +43,7 @@ class WillController < ApplicationController
         @thank_you = "Thank you for registering with us. You registered the following will:"
         render 'show'
       else
-      flash[:danger] = "Please enter all required fields."
+        flash[:danger] = "Please enter all required fields."
         render 'new'
       end
     end
