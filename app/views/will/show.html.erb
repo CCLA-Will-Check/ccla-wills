@@ -18,3 +18,4 @@
 
 <%= button_to 'Change approval status', {action: "edit"}, class: "btn btn-default btn-primary", method: :get %>
 <%= button_to "Delete", @will, method: :delete, data: {confirm: "Are You Sure?"}, class: "btn btn-default btn-primary" %>
+<%= button_to "Return to Wills", {controller: :will, action: :index}, class: "btn btn-default btn-primary", method: :get %>
