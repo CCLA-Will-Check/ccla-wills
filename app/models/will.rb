@@ -12,8 +12,7 @@ class Will < ApplicationRecord
           or lawyer_name ILIKE :search \
           or firm_name ILIKE :search \
           or telephone ILIKE :search \
-          or lsuc ILIKE :search \
-          or dob = :search", {search: "%#{search}%"})
+          or lsuc ILIKE :search", {search: "%#{search}%"})
   end
 
   def self.import(file)
