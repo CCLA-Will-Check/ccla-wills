@@ -1,10 +1,16 @@
-<table class="table">
-<tr><th>Name</th><th>Year</th><th>Date Created</th></tr>
-<% for will in @wills do %>
-  <tr>
-    <td><%= link_to "#{will.first_name} #{will.last_name}", will %></td>
-    <td><%= will.year %></td>
-    <td><%= will.created_at %>
-  </tr>
+<% if @wills %>
+  <table class="table">
+    <tr><th>Name</th><th>Year</th><th>Date Created</th></tr>
+    <% for will in @wills do %>
+      <tr>
+        <td><%= link_to "#{will.first_name} #{will.last_name}", will %></td>
+        <td><%= will.year %></td>
+        <td><%= will.created_at %>
+    </tr>
+  <% end %>
+  </table>
+<% else %>
+
+  <p>Will successfully deleted. Click <%= link_to "here", action: :index %> to see more wills.</p>
+
 <% end %>
-</table>

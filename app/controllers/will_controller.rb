@@ -37,6 +37,11 @@ class WillController < ApplicationController
     render 'success', notice: "Will(s) successfully imported"
   end
 
+  def destroy
+    Will.find(params[:id]).destroy
+    flash[:success] = "Will deleted"
+    render 'index'
+  end
 
   private
   def will_params
