@@ -55,7 +55,8 @@ class WillController < ApplicationController
 
   def import
     Will.import(params[:file])
-    render 'success', notice: "Will(s) successfully imported"
+    flash[:success] = "Wills successfully imported."
+    render 'new'
   end
 
   def destroy
