@@ -1,0 +1,14 @@
+<p>Change approval status.</p>
+
+<p><strong>Testator: </strong>: <%= @will.first_name %> <%= @will.last_name%></p>
+<p>Current status is: <%= @will.approved ? "Approved" : "Not approved" %></p>
+
+<div class="row">
+  <div class="col-md-6">
+    <%= form_for(@will) do |f| %>
+
+      <%= f.label :approved %>
+      <%= f.select :approved, [true, false], class: 'form-control' %>
+      <br />
+      <%= f.submit "Update approved status", class: "btn btn-default btn-primary" %>
+    <% end %>

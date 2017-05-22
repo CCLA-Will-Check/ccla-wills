@@ -13,6 +13,8 @@
   <tr><td><strong>Telephone: </td><td><%= @will.telephone %></td></tr>
   <tr><td><strong>Will Year: </td><td><%= @will.year %></td></tr>
   <tr><td><strong>Date Created: </td><td><%= @will.created_at %></td></tr>
+  <tr><td><strong><%= @will.approved ? "Approved" : "Not approved" %></strong></td></tr>
 </table>
 
-<%= link_to "Delete", @will, method: :delete, data: {confirm: "Are You Sure?"} %>
+<%= button_to 'Change approval status', {action: "edit"}, class: "btn btn-default btn-primary", method: :get %>
+<%= button_to "Delete", @will, method: :delete, data: {confirm: "Are You Sure?"}, class: "btn btn-default btn-primary" %>

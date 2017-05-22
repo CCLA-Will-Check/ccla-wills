@@ -2,11 +2,29 @@ class WillController < ApplicationController
   before_action :logged_in_user, only: [:index]
 
   def index
-    @wills = Will.all
+    approved = params['approved']
+    if approved == 'true'
+      @wills = Will.where(approved: true)
+    else
+      @wills = Will.all
+    end
   end
 
   def new
     @will = Will.new
+  end
+
+  def edit
+    @will = Will.find(params[:id])
+  end
+
+  def update
+    @will = Will.find(params[:id])
+    if @will.update_attributes(will_params)
+      render 'show'
+    else
+      render 'edit'
+    end
   end
 
   def create
@@ -45,7 +63,7 @@ class WillController < ApplicationController
 
   private
   def will_params
-    params.require(:will).permit(:first_name, :last_name, :alt_last_name, :dob, :city_of_birth, :province_of_birth, :country_of_birth, :last_resided, :lawyer_name, :firm_name, :lsuc, :telephone, :year)
+    params.require(:will).permit(:first_name, :last_name, :alt_last_name, :dob, :city_of_birth, :province_of_birth, :country_of_birth, :last_resided, :lawyer_name, :firm_name, :lsuc, :telephone, :year, :approved)
   end
 
   def logged_in_user
