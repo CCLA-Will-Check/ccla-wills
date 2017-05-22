@@ -41,6 +41,7 @@ class WillController < ApplicationController
         @thank_you = "Thank you for registering with us. You registered the following will:"
         render 'show'
       else
+      flash[:danger] = "Please enter all required fields."
         render 'new'
       end
     end

@@ -39,7 +39,7 @@ class RequestController < ApplicationController
     if @request.save
       redirect_to @request
     else
-      flash[:error] = "Please enter all required fields."
+      flash[:danger] = "Please enter all required fields."
       render 'new'
     end
 

@@ -36,6 +36,10 @@
           <%= image_tag "cclacenprigrayrgb300-small.png", class: "ccla-logo" %>
         </div>
         <div id="content" class="col-xs-10">
+          <% flash.each do |message_type, message| %>
+            <div class="alert alert-<%= message_type %>"><%= message %></div>
+          <% end %>
+
           <%= yield %>
         </div>
       </div>
