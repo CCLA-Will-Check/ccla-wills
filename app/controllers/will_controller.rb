@@ -41,12 +41,15 @@ class WillController < ApplicationController
       @will = Will.new(will_params)
       if @will.save
         @thank_you = "Thank you for registering with us. You registered the following will:"
-        render 'show'
+        render 'confirmation'
       else
         flash.now[:danger] = "Please enter all required fields."
         render 'new'
       end
     end
+  end
+
+  def confirmation
   end
 
   def show

@@ -37,12 +37,15 @@ class RequestController < ApplicationController
   def create
     @request = Request.new(request_params)
     if @request.save
-      redirect_to @request
+      render 'confirmation'
     else
       flash[:danger] = "Please enter all required fields."
       render 'new'
     end
 
+  end
+
+  def confirmation
   end
 
   def destroy
