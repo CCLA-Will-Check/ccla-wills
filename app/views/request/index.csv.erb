@@ -1,9 +1,10 @@
-<%- headers = ['Applicant', 'Email', 'Telephone', 'Testator First Name', 'Testator Last Name', 'Alt Name', 'DOB', 'City', 'Province', 'Last Resided In' ] -%>
+<%- headers = ['Applicant', 'Email', 'Telephone', 'LSUC', 'Testator First Name', 'Testator Last Name', 'Alt Name', 'DOB', 'City', 'Province', 'Last Resided In' ] -%>
 <%= CSV.generate_line headers %>
 <%- @requests.each do |request| -%>
   <%= CSV.generate_line([request.applicant,
                          request.email,
                          request.telephone,
+                         request.lsuc,
                          request.testator_first,
                          request.testator_last,
                          request.testator_alt,

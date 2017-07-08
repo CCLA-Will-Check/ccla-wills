@@ -3,12 +3,13 @@ Display <%= form_tag "/request", method: 'get' do %><%= select_tag 'status', '<o
 
 <% if @requests %>
 <table class="table">
-<tr><th>Applicant</th><th>Email</th><th>Telephone</th><th>Testator</th><th>Testator Alt. Name</th><th>DOB</th><th>City</th><th>Province</th><th>Last Resided In</th><th>Status</th></tr>
+  <tr><th>Applicant</th><th>Email</th><th>Telephone</th><th>LSUC</th><th>Testator</th><th>Testator Alt. Name</th><th>DOB</th><th>City</th><th>Province</th><th>Last Resided In</th><th>Status</th></tr>
 <% for request in @requests do %>
   <tr>
     <td><%= link_to request.applicant, request %></td>
     <td><%= request.email %></td>
     <td><%= request.telephone %></td>
+    <td><%= request.lsuc %></td>
     <td><%= request.testator_first %> <%= request.testator_last %></td>
     <td><%= request.testator_alt %></td>
     <td><%= request.testator_dob %></td>

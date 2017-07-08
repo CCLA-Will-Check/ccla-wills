@@ -61,7 +61,7 @@ class RequestController < ApplicationController
 
   private
   def request_params
-    params.require(:request).permit(:applicant, :testator_first, :testator_last, :testator_dob, :testator_city, :email, :telephone, :testator_alt, :testator_province, :testator_country, :testator_last_resident, :status)
+    params.require(:request).permit(:applicant, :testator_first, :testator_last, :testator_dob, :testator_city, :email, :telephone, :testator_alt, :testator_province, :testator_country, :testator_last_resident, :status, :lsuc)
   end
 
   def logged_in_user

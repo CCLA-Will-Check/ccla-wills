@@ -3,4 +3,5 @@ class Request < ApplicationRecord
   validates :testator_first, presence: true
   validates :testator_last, presence: true
   validates :status, presence: true
+  validates :lsuc, presence: true
 end
