@@ -4,7 +4,7 @@
 <p>Your request contained the following data:</p>
 <table>
   <tr><td><strong>Applicant: </strong></td><td><%= @request.applicant %></td></tr>
-  <tr><td><strong>Email: </strong></td><td><%= @request.email %></td></tr>
+  <tr><td><strong>Email: </strong></td><td><%= mail_to @request.email %></td></tr>
   <tr><td><strong>Telephone: </strong></td><td><%= @request.telephone %></td></tr>
   <tr><td><strong>LSUC: </strong></td><td><%= @request.lsuc %></td></tr>
   <tr><td><strong>Testator Name: </strong></td><td><%= @request.testator_first %> <%= @request.testator_last %></td></tr>
@@ -15,6 +15,7 @@
   <tr><td><strong>Country of Birth: </strong></td><td><%= @request.testator_country %></td></tr>
   <tr><td><strong>Last Resided In: </strong></td><td><%= @request.testator_last_resident %></td></tr>
   <tr><td><strong>Request Status: </strong></td><td><%= @request.status %></td</tr>
+  <tr><td><strong>Date created: </strong></td><td><%= @request.created_at.to_date %></td</tr>
 </table>
 
 <%= button_to 'Change Status', {action: "edit"}, class: "btn btn-default btn-primary", method: :get %>

@@ -16,6 +16,6 @@
   <tr><td><strong><%= @will.approved ? "Approved" : "Not approved" %></strong></td></tr>
 </table>
 
-<%= button_to 'Change approval status', {action: "edit"}, class: "btn btn-default btn-primary", method: :get %>
+<%= button_to 'Edit will / Change approval status', {action: "edit"}, class: "btn btn-default btn-primary", method: :get %>
 <%= button_to "Delete", @will, method: :delete, data: {confirm: "Are You Sure?"}, class: "btn btn-default btn-primary" %>
 <%= button_to "Return to Wills", {controller: :will, action: :index}, class: "btn btn-default btn-primary", method: :get %>

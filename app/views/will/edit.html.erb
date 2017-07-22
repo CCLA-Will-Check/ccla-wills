@@ -7,8 +7,107 @@
   <div class="col-md-6">
     <%= form_for(@will) do |f| %>
 
-      <%= f.label :approved %>
-      <%= f.select :approved, [true, false], class: 'form-control' %>
-      <br />
-      <%= f.submit "Update approved status", class: "btn btn-default btn-primary" %>
+      <div class="form-label"><strong>Testator Information</strong></div>
+      <div class= "form-group">
+        <%= f.label :first_name, "*Testator's first name:", class: "col-md-6 control-label" %>
+        <div class= "col-md-6">
+          <%= f.text_field :first_name, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class= "form-group">
+        <%= f.label :last_name, "*Testator's last name:", class: "col-md-6 control-label" %>
+        <div class= "col-md-6">
+          <%= f.text_field :last_name, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class= "form-group">
+        <%= f.label :alt_last_name, "Alternate last name:", class: "col-md-6 control-label" %>
+        <div class= "col-md-6">
+          <%= f.text_field :alt_last_name, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class= "form-group">
+        <%= f.label :dob, "Date of Birth:", class: "col-md-6 control-label" %>
+        <div class= "col-md-6">
+          <%= f.date_field :dob, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class= "form-group">
+        <%= f.label :city_of_birth, "City of Birth:", class: "col-md-6 control-label" %>
+        <div class= "col-md-6">
+          <%= f.text_field :city_of_birth, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class= "form-group">
+        <%= f.label :province_of_birth, "Province of Birth:", class: "col-md-6 control-label" %>
+        <div class= "col-md-6">
+          <%= f.text_field :province_of_birth, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class= "form-group">
+        <%= f.label :country_of_birth, "Country of Birth:", class: "col-md-6 control-label" %>
+        <div class= "col-md-6">
+          <%= f.text_field :country_of_birth, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class= "form-group">
+        <%= f.label :last_resided, "Last resided in (city):", class: "col-md-6 control-label" %>
+        <div class= "col-md-6">
+          <%= f.text_field :last_resided, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="form-label"><strong>Present Location of Will</strong></div>
+      <div class= "form-group">
+        <%= f.label :lawyer_name, "*Lawyer name:", class: "col-md-6 control-label" %>
+        <div class= "col-md-6">
+          <%= f.text_field :lawyer_name, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class= "form-group">
+        <%= f.label :firm_name, "*Firm name:", class: "col-md-6 control-label" %>
+        <div class= "col-md-6">
+          <%= f.text_field :firm_name, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class= "form-group">
+        <%= f.label :lsuc, "*LSUC number:", class: "col-md-6 control-label" %>
+        <div class= "col-md-6">
+          <%= f.text_field :lsuc, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class= "form-group">
+        <%= f.label :telephone, "*Telephone number:", class: "col-md-6 control-label" %>
+        <div class= "col-md-6">
+          <%= f.text_field :telephone, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class= "form-group">
+        <%= f.label :year, "*Year of will:", class: "col-md-6 control-label" %>
+        <div class= "col-md-6">
+          <%= f.text_field :year, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="form-group"
+        <%= f.label :approved %>
+        <div class="col-md-6"> 
+          <%= f.select :approved, [true, false], class: 'form-control' %>
+        </div>
+      </div>
+
+      <div id="submit">
+        <%= f.submit "Update will", class: "btn btn-default btn-primary" %>
+      </div>
     <% end %>
