@@ -6,7 +6,7 @@ Display <%= form_tag "/will", method: 'get' do %><%= select_tag 'approved', '<op
       <tr>
         <td><%= link_to "#{will.first_name} #{will.last_name}", will %></td>
         <td><%= will.year %></td>
-        <td><%= will.created_at %>
+        <td><%= will.created_at.to_date %>
         <td><%= will.approved ? "Approved" : "Not approved" %></td>
     </tr>
   <% end %>

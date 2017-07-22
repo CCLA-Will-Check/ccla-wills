@@ -12,7 +12,7 @@
   <tr><td><strong>LSUC: </td><td><%= @will.lsuc %></td></tr>
   <tr><td><strong>Telephone: </td><td><%= @will.telephone %></td></tr>
   <tr><td><strong>Will Year: </td><td><%= @will.year %></td></tr>
-  <tr><td><strong>Date Created: </td><td><%= @will.created_at %></td></tr>
+  <tr><td><strong>Date Created: </td><td><%= @will.created_at.to_date %></td></tr>
   <tr><td><strong><%= @will.approved ? "Approved" : "Not approved" %></strong></td></tr>
 </table>
 
