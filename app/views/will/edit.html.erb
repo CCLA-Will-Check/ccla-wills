@@ -1,4 +1,4 @@
-<p>Change approval status.</p>
+<p>Edit will / Change approval status.</p>
 
 <p><strong>Testator: </strong>: <%= @will.first_name %> <%= @will.last_name%></p>
 <p>Current status is: <%= @will.approved ? "Approved" : "Not approved" %></p>
@@ -100,14 +100,17 @@
         </div>
       </div>
 
-      <div class="form-group"
-        <%= f.label :approved %>
+      <div class="form-group">
+        <%= f.label :approved, "Approved:", class: "col-md-6 control-label" %>
         <div class="col-md-6"> 
-          <%= f.select :approved, [true, false], class: 'form-control' %>
+          <%= f.select :approved, [true, false], class: "form-control" %>
         </div>
-      </div>
-
+    </div>
+    <div class = "form-group">
+      <div class="col-md-6">
       <div id="submit">
         <%= f.submit "Update will", class: "btn btn-default btn-primary" %>
       </div>
+      </div>
+    </div>
     <% end %>
