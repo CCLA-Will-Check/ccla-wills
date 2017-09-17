@@ -1,0 +1,18 @@
+<%- headers = ['First Name', 'Last Name', 'Alt Last Name', 'DOB', 'City of Birth', 'Province of Birth', 'Country of Birth', 'Last Resided', 'Lawyer Name', 'Firm Name', 'LSUC', 'Telephone', 'Year', 'Approved' ] -%>
+<%= CSV.generate_line headers %>
+<%- @wills.each do |will| -%>
+  <%= CSV.generate_line([will.first_name,
+                         will.last_name,
+                         will.alt_last_name,
+                         will.dob,
+                         will.city_of_birth,
+                         will.province_of_birth,
+                         will.country_of_birth,
+                         will.last_resided,
+                         will.lawyer_name,
+                         will.firm_name,
+                         will.lsuc,
+                         will.telephone,
+                         will.year,
+                         will.approved]) -%>
+<%- end -%>
